@@ -1,17 +1,68 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { FaLinkedin, FaTelegramPlane, FaEnvelope, FaGithub } from 'react-icons/fa';
 
 function Header() {
+  const [hoveredIcon, setHoveredIcon] = useState(null);
+  const iconStyle = { color: 'rgba(138, 227, 216, 1.1)', transition: 'color 0.3s' };
+
+  const handleMouseEnter = (icon) => {
+    setHoveredIcon(icon); // Set the hovered icon
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIcon(null); // Reset the hovered icon
+  };
+
   return (
-    <div className='bg-white flex justify-end gap-4 mr-2 p-2'  >
-         <img className='w-[23px] flex' src='image/linkedin.png'></img>
-   <img className='w-[23px] flex' src='image/telegram.png'></img>
-   <img className='w-[23px] flex' src='image/email.png'></img>
-   <img className='w-[23px] flex' src='image/github.png'></img>
-
-
-
-    </div>
-  )
+    <header className='flex justify-end gap-4 p-5'>
+      <a 
+        href="https://www.linkedin.com" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        aria-label="LinkedIn"
+        onMouseEnter={() => handleMouseEnter('linkedin')}
+        onMouseLeave={handleMouseLeave}
+      >
+        <FaLinkedin 
+          style={{ ...iconStyle, color: hoveredIcon === 'linkedin' ? 'rgba(255, 255, 255, 1)' : iconStyle.color }} 
+        />
+      </a>
+      <a 
+        href="https://telegram.org" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        aria-label="Telegram"
+        onMouseEnter={() => handleMouseEnter('telegram')}
+        onMouseLeave={handleMouseLeave}
+      >
+        <FaTelegramPlane 
+          style={{ ...iconStyle, color: hoveredIcon === 'telegram' ? 'rgba(255, 255, 255, 1)' : iconStyle.color }} 
+        />
+      </a>
+      <a 
+        href="mailto:example@example.com" 
+        aria-label="Email"
+        onMouseEnter={() => handleMouseEnter('email')}
+        onMouseLeave={handleMouseLeave}
+      >
+        <FaEnvelope 
+          style={{ ...iconStyle, color: hoveredIcon === 'email' ? 'rgba(255, 255, 255, 1)' : iconStyle.color }} 
+        />
+      </a>
+      <a 
+        href="https://github.com" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        aria-label="GitHub"
+        onMouseEnter={() => handleMouseEnter('github')}
+        onMouseLeave={handleMouseLeave}
+      >
+        <FaGithub 
+          style={{ ...iconStyle, color: hoveredIcon === 'github' ? 'rgba(255, 255, 255, 1)' : iconStyle.color }} 
+        />
+      </a>
+    </header>
+  );
 }
 
-export default Header
+export default Header;
