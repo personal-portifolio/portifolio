@@ -69,7 +69,7 @@ function Skills() {
                     delay: 0.5,
                     staggerChildren: 0.1 
                 }}
-                className='container mt-5 flex justify-center items-center flex-wrap gap-5 mt-5'
+                className='container flex justify-center items-center flex-wrap gap-5 mt-5'
             >
                 {skillsData.map((skill, index) => (
                     <SkillItem key={index} icon={skill.icon} label={skill.label} />

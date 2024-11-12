@@ -2,6 +2,8 @@
 import './App.css';
 import Header from './component/Header';
 import Hero from './component/Hero';
+
+import Service from './component/Service';
 import Skills from './component/Skills';
 
 
@@ -10,7 +12,9 @@ function App() {
     <div className="App bg-black text-white">
   <Header/>
   <Hero/>
+  <Service/>
   <Skills/>
+ 
   
  
     </div>
