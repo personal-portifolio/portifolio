@@ -22,7 +22,7 @@ const skillsData = [
 
 const SkillItem = ({ icon, label }) => (
     <motion.div 
-        className='flex flex-col justify-center items-center'
+        className='flex flex-col items-center'
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ 
@@ -35,7 +35,7 @@ const SkillItem = ({ icon, label }) => (
             transition: { duration: 0.2 }
         }}
     >
-        <div className='text-[40px]'>{icon}</div>
+        <div className='text-[30px]'>{icon}</div>
         <span className='text-sm text-gray-200'>{label}</span>
     </motion.div>
 );
@@ -47,7 +47,7 @@ function Skills() {
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
-                className='container mx-auto mt-10 text-center text-teal-400 text-2xl font-bold'
+                className='container mx-auto mt-14 text-center text-teal-400 text-xl font-semibold'
             >
                 Skills
             </motion.div>
@@ -69,7 +69,7 @@ function Skills() {
                     delay: 0.5,
                     staggerChildren: 0.1 
                 }}
-                className='container flex justify-center items-center flex-wrap gap-5 mt-5'
+                className=' flex justify-center gap-9 items-center flex-wrap  mt-5'
             >
                 {skillsData.map((skill, index) => (
                     <SkillItem key={index} icon={skill.icon} label={skill.label} />
