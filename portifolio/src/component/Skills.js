@@ -20,29 +20,29 @@ const skillsData = [
 ];
 
 const SkillItem = ({ icon, label }) => (
-    <div className='flex flex-col items-center'>
-        <div className='text-[30px]'>{icon}</div>
-        <span className='text-sm text-gray-200'>{label}</span>
+    <div className='flex flex-col items-center p-4 transition-transform transform hover:scale-105 bg-gray-900 rounded-lg shadow-md hover:shadow-lg'>
+        <div className='text-[40px] text-teal-400'>{icon}</div>
+        <span className='mt-2 text-sm text-gray-300'>{label}</span>
     </div>
 );
 
 function Skills() {
     return (
-        <>
-            <div className='container mx-auto mt-14 text-center text-teal-400 text-xl font-semibold'>
+        <div className='bg-black min-h-screen py-10'>
+            <div className='container mx-auto text-center text-teal-500 text-3xl font-semibold'>
                 Skills
             </div>
             
-            <div className='container mx-auto mt-5 text-gray-200 text-sm'>
+            <div className='container mx-auto mt-5 text-gray-400 text-sm'>
                 The skills, tools, and technologies I am really good at:
             </div>
             
-            <div className='flex justify-center gap-9 items-center flex-wrap mt-5'>
+            <div className='flex justify-center gap-6 items-center flex-wrap mt-8'>
                 {skillsData.map((skill, index) => (
                     <SkillItem key={index} icon={skill.icon} label={skill.label} />
                 ))}
             </div>
-        </>
+        </div>
     );
 }
 
