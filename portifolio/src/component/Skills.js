@@ -28,7 +28,7 @@ const SkillItem = ({ icon, label }) => (
 
 function Skills() {
     return (
-        <div className='bg-black min-h-screen py-10'>
+        <div className='bg-black  py-10'>
             <div className='container mx-auto text-center text-teal-500 text-3xl font-semibold'>
                 Skills
             </div>

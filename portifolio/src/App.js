@@ -5,6 +5,8 @@ import Hero from './component/Hero';
 
 import Service from './component/Service';
 import Skills from './component/Skills';
+import ContactPage from './component/Contact';
+
 
 
 function App() {
@@ -14,6 +16,12 @@ function App() {
   <Hero/>
   <Service/>
   <Skills/>
+  <ContactPage/>
+  <div className='flex justify-around text-2xl '>
+  <Header/>
+  </div>
+
+
  
   
  
