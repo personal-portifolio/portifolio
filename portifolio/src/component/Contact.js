@@ -12,20 +12,20 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-around bg-gray-900 p-4 md:p-8">
+    <div className="flex flex-col md:flex-row items-center justify-around  p-4 md:p-8">
       <div className="md:w-1/2 p-4 text-left">
         <h2 className="text-3xl md:text-4xl font-semibold text-white">
           Got a project in <br />
           <span className="text-teal-400">mind?</span>
         </h2>
         <img
-          src="image/contact.jpg"
+          src="image/contact.png"
           alt="Contact"
-          className="mt-4 rounded-lg shadow-lg w-full h-auto"
+          className="mt-4 rounded-lg shadow-lg  h-auto"
         />
       </div>
       <div className="md:w-1/2 p-4 mt-4">
-        <form onSubmit={handleSubmit} className="bg-gray-800 p-6 rounded-lg shadow-lg">
+        <form onSubmit={handleSubmit} className=" p-6 rounded-lg shadow-lg">
           <div className="flex flex-col gap-4">
             <div className="mb-6">
               <label htmlFor="name" className="block text-left text-gray-400 font-medium mb-2">
@@ -69,7 +69,7 @@ const ContactPage = () => {
             </div>
             <button
               type="submit"
-              className="bg-teal-400 hover:bg-teal-500 text-white font-medium rounded-md px-6 py-3"
+              className="bg-teal-400 hover:bg-teal-500 text-white font-medium rounded-md px-6 w-24 py-3"
             >
               Submit
             </button>
