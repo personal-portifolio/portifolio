@@ -9,14 +9,12 @@ const skillsData = [
     { icon: <FaPython />, label: 'Python' },
     { icon: <FaJava />, label: 'Java' },
     { icon: <FaPhp />, label: 'PHP' },
-    { icon: <FaNodeJs />, label: 'Node.js' },
     { icon: <FaReact />, label: 'React' },
     { icon: <SiTailwindcss />, label: 'Tailwind' },
     { icon: <SiFigma />, label: 'Figma' },
     { icon: <SiMysql />, label: 'SQL' },
-    { icon: <SiDjango />, label: 'Django' },
     { icon: <FaGitAlt />, label: 'Git' },
-    { icon: <SiSupabase />, label: 'Supabase' },
+
 ];
 
 const SkillItem = ({ icon, label }) => (

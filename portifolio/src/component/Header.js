@@ -16,7 +16,7 @@ function Header() {
   return (
     <header className='flex justify-end gap-4 p-5'>
       <a 
-        href="https://www.linkedin.com" 
+        href="https://www.linkedin.com/in/maraki-astatke-09174830a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BxQQu6fB6SzKgW9SLMPQOKw%3D%3D" 
         target="_blank" 
         rel="noopener noreferrer" 
         aria-label="LinkedIn"
@@ -50,7 +50,7 @@ function Header() {
         />
       </a>
       <a 
-        href="https://github.com" 
+        href="https://github.com/maki-max/" 
         target="_blank" 
         rel="noopener noreferrer" 
         aria-label="GitHub"
