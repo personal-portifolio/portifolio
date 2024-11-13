@@ -1,6 +1,6 @@
 import React from 'react';
-import { FaHtml5, FaCss3, FaPython, FaJs, FaJava, FaPhp, FaNodeJs, FaReact, FaGitAlt } from 'react-icons/fa';
-import { SiTailwindcss, SiFigma, SiMysql, SiDjango, SiSupabase } from 'react-icons/si';
+import { FaHtml5, FaCss3, FaPython, FaJs, FaJava, FaPhp, FaReact, FaGitAlt } from 'react-icons/fa';
+import { SiTailwindcss, SiFigma, SiMysql } from 'react-icons/si';
 
 const skillsData = [
     { icon: <FaHtml5 />, label: 'HTML' },
