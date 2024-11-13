@@ -10,6 +10,7 @@ import ContactPage from './component/Contact';
 
 
 
+
 function App() {
   return (
     <div className="App bg-black text-white">
@@ -17,7 +18,7 @@ function App() {
   <Hero/>
   <Service/>
   <Skills/>
-  <ContactPage/>
+ <ContactPage/>
   <div className='flex justify-around text-2xl '>
   <Header/>
   </div>
