@@ -2,10 +2,10 @@ import React from 'react';
 import './App.css';
 import Header from './component/Header';
 import Hero from './component/Hero';
-
 import Service from './component/Service';
 import Skills from './component/Skills';
 import ContactPage from './component/Contact';
+import Project from './component/Project';
 
 
 
@@ -18,6 +18,7 @@ function App() {
   <Hero/>
   <Service/>
   <Skills/>
+  <Project/>
  <ContactPage/>
   <div className='flex justify-around text-2xl '>
   <Header/>
