@@ -12,69 +12,103 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="flex flex-col md:flex-row items-center justify-around  p-4 md:p-8">
-      <div className="md:w-1/2 p-4 text-left">
-        <h2 className="text-3xl md:text-4xl font-semibold text-white">
-          Got a project in <br />
-          <span className="text-teal-400">mind?</span>
-        </h2>
-        <img
-          src="image/contact.png"
-          alt="Contact"
-          className="mt-4 rounded-lg shadow-lg  h-auto"
-        />
-      </div>
-      <div className="md:w-1/2 p-4 mt-4">
-        <form onSubmit={handleSubmit} className=" p-6 rounded-lg shadow-lg">
-          <div className="flex flex-col gap-4">
-            <div className="mb-6">
-              <label htmlFor="name" className="block text-left text-gray-400 font-medium mb-2">
-                <FaUserAlt className="inline-block mr-2" />
+    <div className="container mx-auto px-4 py-12 lg:py-20">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        {/* Left Side - Text and Image */}
+        <div className="space-y-6 text-center lg:text-left">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+            Got a project in <br />
+            <span className="text-teal-400">mind?</span>
+          </h2>
+          
+          <div className="hidden lg:block">
+            <img
+              src="image/contact.png"
+              alt="Contact"
+              className="w-full max-w-md mx-auto rounded-lg shadow-2xl transform hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+        </div>
+
+        {/* Right Side - Contact Form */}
+        <div className="bg-gray-800 rounded-xl shadow-2xl p-6 sm:p-8 lg:p-10">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Name Input */}
+            <div>
+              <label 
+                htmlFor="name" 
+                className="block text-sm font-medium text-gray-300 mb-2 flex items-center"
+              >
+                <FaUserAlt className="mr-2 text-teal-400" />
                 Your Name
               </label>
               <input
                 type="text"
                 id="name"
-                className="bg-gray-700 text-gray-400 rounded-md px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-3 bg-gray-700 text-white rounded-lg 
+                focus:outline-none focus:ring-2 focus:ring-teal-500 
+                transition duration-300"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
+                placeholder="Enter your name"
               />
             </div>
-            <div className="mb-6">
-              <label htmlFor="email" className="block text-left text-gray-400 font-medium mb-2">
-                <FaEnvelope className="inline-block mr-2" />
+
+            {/* Email Input */}
+            <div>
+              <label 
+                htmlFor="email" 
+                className="block text-sm font-medium text-gray-300 mb-2 flex items-center"
+              >
+                <FaEnvelope className="mr-2 text-teal-400" />
                 Your Email
               </label>
               <input
                 type="email"
                 id="email"
-                className="bg-gray-700 text-gray-400 rounded-md px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full px-4 py-3 bg-gray-700 text-white rounded-lg 
+                focus:outline-none focus:ring-2 focus:ring-teal-500 
+                transition duration-300"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
+                placeholder="Enter your email"
               />
             </div>
-            <div className="mb-6">
-              <label htmlFor="message" className="block text-left text-gray-400 font-medium mb-2">
+
+            {/* Message Textarea */}
+            <div>
+              <label 
+                htmlFor="message" 
+                className="block text-sm font-medium text-gray-300 mb-2"
+              >
                 Your Message
               </label>
               <textarea
                 id="message"
-                className="bg-gray-700 text-gray-400 rounded-md px-4 py-3 w-full h-32 focus:outline-none focus:ring-2 focus:ring-teal-500 resize-none"
+                className="w-full px-4 py-3 bg-gray-700 text-white rounded-lg 
+                focus:outline-none focus:ring-2 focus:ring-teal-500 
+                transition duration-300 h-32 resize-none"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 required
+                placeholder="Write your message here..."
               ></textarea>
             </div>
+
+            {/* Submit Button */}
             <button
               type="submit"
-              className="bg-teal-400 hover:bg-teal-500 text-white font-medium rounded-md px-6 w-24 py-3"
+              className="w-full bg-teal-500 text-white py-3 rounded-lg 
+              hover:bg-teal-600 transition duration-300 
+              transform hover:scale-105 active:scale-95 
+              font-semibold tracking-wider"
             >
-              Submit
+              Send Message
             </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   );
