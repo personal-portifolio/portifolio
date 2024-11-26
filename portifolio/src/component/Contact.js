@@ -14,7 +14,6 @@ const ContactPage = () => {
   return (
     <div className="container mx-auto px-4 py-12 lg:py-20">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-        {/* Left Side - Text and Image */}
         <div className="space-y-6 text-center lg:text-left">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
             Got a project in <br />
@@ -55,7 +54,6 @@ const ContactPage = () => {
               />
             </div>
 
-            {/* Email Input */}
             <div>
               <label 
                 htmlFor="email" 
@@ -77,7 +75,6 @@ const ContactPage = () => {
               />
             </div>
 
-            {/* Message Textarea */}
             <div>
               <label 
                 htmlFor="message" 
@@ -97,7 +94,6 @@ const ContactPage = () => {
               ></textarea>
             </div>
 
-            {/* Submit Button */}
             <button
               type="submit"
               className="w-full bg-teal-500 text-white py-3 rounded-lg 
