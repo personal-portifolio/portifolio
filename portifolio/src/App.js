@@ -6,6 +6,7 @@ import Service from './component/Service';
 import Skills from './component/Skills';
 import ContactPage from './component/Contact';
 import Project from './component/Project';
+import PricingCard from './component/PricingCard';
 
 
 
@@ -19,6 +20,7 @@ function App() {
   <Service/>
   <Skills/>
   <Project/>
+  <PricingCard/>
  <ContactPage/>
   <div className='flex justify-around text-2xl '>
   <Header/>
